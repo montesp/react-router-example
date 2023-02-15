@@ -23,7 +23,7 @@ function Menu() {
       <nav>
         <ul>
           {routes.map(route => (
-            <li>
+            <li key={route.to}>
               <NavLink
                 to={route.to}
                 className={({ isActive })=> (
