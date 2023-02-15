@@ -28,11 +28,12 @@
   list-style-type: none;
 }
 
-.header nav ul li a {
+.link {
   text-decoration: none;
   color: white;
 }
 
-.header nav ul li a:hover {
+.link--selected {
+  text-decoration: none;
   color: black;
 }
