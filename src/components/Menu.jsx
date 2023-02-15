@@ -15,6 +15,14 @@ routes.push({
   to: '/blog',
   text: 'Blog',
 });
+routes.push({
+  to: '/login',
+  text: 'Login',
+});
+routes.push({
+  to: '/logout',
+  text: 'Logout',
+});
 
 
 function Menu() {
@@ -34,16 +42,6 @@ function Menu() {
               </NavLink>
             </li>
           ))}
-
-          {/* <li>
-            <Link to="/" className="link">Home</Link>
-          </li>
-          <li>
-            <Link to="/blog" className="link">Blog</Link>
-          </li>
-          <li>
-            <Link to="/profile" className="link">Profile</Link>
-          </li> */}
         </ul>
       </nav>
     </header>
