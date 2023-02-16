@@ -6,7 +6,7 @@ import { Menu } from './components/Menu';
 import { BlogPost } from './components/BlogPost';
 import { Login } from './components/Login';
 import { Logout } from './components/Logout';
-import { AuthProvider, Auth } from './components/auth';
+import { AuthProvider, AuthRoute } from './components/auth';
 
 function App() {
   return (
@@ -19,9 +19,21 @@ function App() {
             <Route path='/blog' element={<Blog/>} >
               <Route path=':slug' element={<BlogPost/>} />
             </Route>
-            <Route path='/profile' element={<Profile/>} />
+            <Route
+              path='/profile'
+              element={
+                <AuthRoute>
+                  <Profile/>
+                </AuthRoute>
+              }/>
             <Route path='/login' element={<Login/>} />
-            <Route path='/logout' element={<Logout/>} />
+            <Route
+              path='/logout'
+              element={
+                <AuthRoute>
+                  <Logout/>
+                </AuthRoute>
+              }/>
             <Route path='*' element={<p>Not Found</p>} />
           </Routes>
         </AuthProvider>
