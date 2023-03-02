@@ -1,12 +1,12 @@
 import { HashRouter, Routes, Route } from 'react-router-dom'
-import { Home } from './components/Home';
-import { Blog } from './components/Blog';
-import { Profile } from './components/Profile';
-import { Menu } from './components/Menu';
-import { BlogPost } from './components/BlogPost';
-import { Login } from './components/Login';
-import { Logout } from './components/Logout';
-import { AuthProvider, AuthRoute } from './components/auth';
+import { Home } from './components/Home/Home';
+import { Blog } from './components/Blog/Blog';
+import { Profile } from './components/Profile/Profile';
+import { Menu } from './components/Menu/Menu';
+import { BlogPost } from './components/BlogPost/BlogPost';
+import { Login } from './components/Login/Login';
+import { Logout } from './components/Logout/Logout';
+import { AuthProvider, AuthRoute } from './hooks/auth';
 
 function App() {
   return (

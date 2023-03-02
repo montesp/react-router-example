@@ -1,0 +1,10 @@
+.home {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
+
+.home__title {
+  font-size: 42px;
+  text-align: center;
+}

@@ -1,7 +1,7 @@
 import React from "react";
-import { blogdata } from "./blogdata";
+import { blogdata } from "../../hooks/blogdata";
 import { useNavigate, useParams} from "react-router-dom";
-import { useAuth } from "./auth";
+import { useAuth } from "../../hooks/auth";
 
 function BlogPost() {
   const navigate = useNavigate();
