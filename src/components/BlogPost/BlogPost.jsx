@@ -2,6 +2,7 @@ import React from "react";
 import { blogdata } from "../../hooks/blogdata";
 import { useNavigate, useParams} from "react-router-dom";
 import { useAuth } from "../../hooks/auth";
+import './Blogpost.css';
 
 function BlogPost() {
   const navigate = useNavigate();
@@ -17,17 +18,27 @@ function BlogPost() {
     navigate('/blog');
   }
 
+  const deleteBlog = (title) => {
+    const index = blogdata.findIndex(blog => blog.slug === 'que-es-angular');
+    console.log(index)
+    // const data = blogdata.filter(blog => blog.slug === 'que-es-angular')
+    console.log(blogdata);
+    // Borra elementos, crear un hook para compartir los datos
+    // blogdata.splice(index, index+1)
+    // console.log(blogdata);
+  }
+
   return (
-    <>
-      <h2>{blogpost.title}</h2>
-      <p>{blogpost.content}</p>
-      <p>{blogpost.author}</p>
-      <button onClick={returnToBlog}>Volver al blog</button>
+    <div className="blogpost">
+      <h2 className="blogpost__title">{blogpost.title}</h2>
+      <p className="blogpost__author">Author: {blogpost.author}</p>
+      <p className="blogpost__content">{blogpost.content}</p>
+      <button className="blogpost__button" onClick={returnToBlog}>Volver al blog</button>
 
       {canDelete && (
-        <button>Eliminar Blogpost</button>
+        <button className="blogpost__button" onClick={deleteBlog}>Eliminar Blogpost</button>
       )}
-    </>
+    </div>
   );
 }
 

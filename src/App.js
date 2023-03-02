@@ -7,6 +7,7 @@ import { BlogPost } from './components/BlogPost/BlogPost';
 import { Login } from './components/Login/Login';
 import { Logout } from './components/Logout/Logout';
 import { AuthProvider, AuthRoute } from './hooks/auth';
+import './App.css';
 
 function App() {
   return (

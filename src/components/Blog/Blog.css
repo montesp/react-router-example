@@ -1,0 +1,20 @@
+.blog {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.blog__title {
+  font-size: 42px;
+}
+
+.blog__link {
+  list-style: none;
+  margin: 3px 0;
+}
+
+.blog__link-anchor {
+  text-decoration: none;
+  color: blue;
+}
