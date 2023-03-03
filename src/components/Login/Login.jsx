@@ -1,6 +1,7 @@
 import React from "react";
 import { useAuth } from "../../hooks/auth";
 import { Navigate } from "react-router-dom";
+import './Login.css';
 
 function Login() {
   const auth = useAuth();
@@ -16,17 +17,20 @@ function Login() {
   }
 
   return (
-    <>
-      <h2>Login</h2>
-      <form onSubmit={login}>
-        <label id="user">Escribe tu nombre de usuario:</label>
-        <input
-          value={username}
-          onChange={e => setUsername(e.target.value)}
-        />
-        <button type="submit">Entrar</button>
-      </form>
-    </>
+    <main className="main">
+      <section className="login">
+        <h2 className="login__title">Login</h2>
+        <form className="login__form" onSubmit={login}>
+          <label className="login__form-text" id="user">Usuario:</label>
+          <input
+            className="login__form-input"
+            value={username}
+            onChange={e => setUsername(e.target.value)}
+          />
+          <button className="login__form-button " type="submit">Entrar</button>
+        </form>
+      </section>
+    </main>
   );
 }
 

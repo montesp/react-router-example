@@ -9,7 +9,7 @@ function Blog() {
       <section className="blog">
         <h1 className="blog__title">Blog</h1>
         {blogdata.map(post => (
-          <BlogLink key={post.slugf} post={post}/>
+          <BlogLink key={post.slug} post={post}/>
         ))}
         <Outlet/>
       </section>
