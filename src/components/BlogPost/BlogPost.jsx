@@ -1,5 +1,5 @@
 import React from "react";
-import { blogdata } from "../../hooks/blogdata";
+import { data } from "../../hooks/useBlogData";
 import { useNavigate, useParams} from "react-router-dom";
 import { useAuth } from "../../hooks/auth";
 import './Blogpost.css';
@@ -10,7 +10,7 @@ function BlogPost() {
   
   const auth = useAuth();
 
-  const blogpost = blogdata.find(post => post.slug === slug);
+  const blogpost = data.find(post => post.slug === slug);
 
   const canDelete = auth.user?.isAdmin || blogpost.author === auth.user?.username;
 
@@ -19,10 +19,10 @@ function BlogPost() {
   }
 
   const deleteBlog = (title) => {
-    const index = blogdata.findIndex(blog => blog.slug === 'que-es-angular');
+    const index = data.findIndex(blog => blog.slug === 'que-es-angular');
     console.log(index)
     // const data = blogdata.filter(blog => blog.slug === 'que-es-angular')
-    console.log(blogdata);
+    console.log(data);
     // Borra elementos, crear un hook para compartir los datos
     // blogdata.splice(index, index+1)
     // console.log(blogdata);
