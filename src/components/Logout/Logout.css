@@ -1,7 +1,7 @@
-.login {
+.logout {
   background-color: blue;
   width: 30%;
-  height: 280px;
+  height: 180px;
   display: block;
   margin: 0 auto;
   padding: 30px 20px;
@@ -10,27 +10,28 @@
   color: white;
 }
 
-.login__title {
+.logout__title {
   margin-bottom: 15px;
   font-size: 54px;
   font-weight: 600;
   text-align: center;
 }
 
-.login__form {
+.logout__form {
   width: 80%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
 }
 
-.login__form-text {
+.logout__form-text {
   font-size: 24px;
   line-height: 24px;
   margin-bottom: 12px;
+  text-align: center;
 }
 
-.login__form-input{
+.logout__form-input {
   width: calc(100% - 15px);
   height: 40px;
   margin-bottom: 25px;
@@ -39,7 +40,7 @@
   font-size: 24px;
 }
 
-.login__form-button {
+.logout__form-button {
   background-color: white;
   width: 240px;
   height: 50px;
@@ -47,6 +48,6 @@
   border: 2px solid black;
   border-radius: 20px;
   color: black;
-  outline: 0;
   font-size: 18px;
+  outline: 0;
 }
